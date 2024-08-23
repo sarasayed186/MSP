@@ -1,0 +1,260 @@
+/* global */
+:root {
+  --bs:6px; /*border_size*/
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+  background-color: #0d0d0d;
+} 
+
+section {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/** scrollbar **/
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(120deg, #60dfcd, #1ebbff, #60dfcd);
+  border-radius: 10px;
+}
+
+/** selection **/
+/*
+::selection {
+  background-color: rgb(127 186 0 / 60%);
+}
+*/
+
+.pic {
+  border: 5px solid #1ebbff ;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 6px rgb(30 187 255 / 40%);
+}
+.pic:hover {
+  transform:scale(1.06) ;
+}
+
+/* crew-post */
+
+.crew-post {
+  padding: 40px 0 10px 0;
+  margin: 140px auto 80px auto;
+}
+.crew-post h1 {
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  background: linear-gradient(180deg, #60d8cd, #1ebbff, #60dfcd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.crew-post .post-desc {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #9ba1a4;
+}
+.crew-post .card {
+  border:none;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+.crew-post .card-title {
+  color: #f0f5f7;
+  line-height: 1.2;
+  font-size: 26px;
+  border-bottom: 2px solid #1ebbff;
+}
+.crew-post .card-subtitle {
+  background: linear-gradient(120deg, #f0f5f7, #1ebbff, #f0f5f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+  font-size: 21px;
+  font-weight: bold;
+}
+.crew-post .card-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+.crew-post .headcard {
+  margin: 0 auto;
+  width: 180px;
+}
+
+@media screen and (max-width:768px) {
+  .crew-post .headcard {
+    width: 50%;
+  }
+}
+.crew-post .box {
+  width: 130px;
+  margin: 5px auto;
+}
+.crew-post .mid {
+  margin: 0 auto;
+}
+
+/** modal **/
+.pop .modal {
+  padding-left: 23px;
+}
+.pop .modal-content {
+  background-color: #1f2027;
+}
+.pop .modal-title {
+  width: 100%;
+  background: linear-gradient(120deg, #60dfcd, #1ebbff, #60dfcd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.pop .close{
+    background-color:#1ebbff; 
+    margin: auto;
+    font-size: 15px;
+    color: #f0f5f7;
+    opacity: 1 !important;
+}
+
+.pop button {
+  background: #1ebbff;
+}
+
+.pop .modal-dialog {
+  margin: 80px auto;
+  max-width: 800px;
+  height: auto;
+}
+.pop .row {
+  padding: 10px 0;
+}
+
+.pop .headcard {
+  margin: 0 auto;
+  width: 10%;
+}
+.pop .box {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.pop .head{
+    width: 45%;
+}
+
+.pop .hbox {
+  padding: 10px 0;
+}
+
+.modal-title{
+    padding: 5px 0 0 50px;
+}
+.pop .card-title {
+  margin: 24px 0 10px 0;
+  color: #f0f5f7;
+  font-size: 22px;
+}
+.pop .card-subtitle {
+  background: linear-gradient(120deg, #60dfcd, #1ebbff, #60dfcd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.pop p {
+  color: #f0f5f7;
+  padding: 10px 20px;
+}
+.pop .modal-header {
+  border-bottom: 1px solid #1ebbff;
+}
+.pop .modal-footer {
+  border-top:1px solid #1ebbff;
+}
+hr {
+  background-color:#1ebbff;
+}
+.border-right {
+  border-right:  1px solid #1ebbff !important;
+}
+
+/** border **/
+
+
+:root {
+  --bs:6px; /*border_size*/
+}
+
+/*****************animated borders************/
+.animated-box {
+  position: relative;
+ /* width: fit-content; */
+}
+
+.animated-box:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(120deg, #60dfad, #1ebbff, #60dfad);
+  background-size: 300% 300%; /*سرعة تغيير اللون*/
+  clip-path: polygon(0% 100%, var(--bs) 100%, var(--bs) var(--bs), calc(100% - var(--bs)) var(--bs), calc(100% - var(--bs)) calc(100% - var(--bs)), var(--bs) calc(100% - var(--bs)), var(--bs) 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+.animated-box.in:after {
+  animation: frame-enter 2s forwards ease-in-out reverse, gradient-animation 3s ease-in-out infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 15% 0%;
+  }
+  50% {
+    background-position: 85% 100%;
+  }
+  100% {
+    background-position: 15% 0%;
+  }
+}
+
+@keyframes frame-enter {
+  0% {
+    clip-path: polygon(0% 100%, var(--bs) 100%, var(--bs) var(--bs), calc(100% - var(--bs)) var(--bs), calc(100% - var(--bs)) calc(100% - var(--bs)), var(--bs) calc(100% - var(--bs)), var(--bs) 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    clip-path: polygon(0% 100%, var(--bs) 100%, var(--bs) var(--bs), calc(100% - var(--bs)) var(--bs), calc(100% - var(--bs)) calc(100% - var(--bs)), calc(100% - var(--bs)) calc(100% - var(--bs)), calc(100% - var(--bs)) 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 100%, var(--bs) 100%, var(--bs) var(--bs), calc(100% - var(--bs)) var(--bs), calc(100% - var(--bs)) var(--bs), calc(100% - var(--bs)) var(--bs), calc(100% - var(--bs)) var(--bs), calc(100% - var(--bs)) var(--bs), 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, var(--bs) 100%, var(--bs) var(--bs), var(--bs) var(--bs), var(--bs) var(--bs), var(--bs) var(--bs), var(--bs) var(--bs), var(--bs) var(--bs), var(--bs) 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, var(--bs) 100%, var(--bs) 100%, var(--bs) 100%, var(--bs) 100%, var(--bs) 100%, var(--bs) 100%, var(--bs) 100%, var(--bs) 100%, 0% 100%);
+  }
+}

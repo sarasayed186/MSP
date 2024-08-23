@@ -1,0 +1,75 @@
+
+  body{  
+    font-family: Calibri, Helvetica, sans-serif;  
+    /* background-color: rgb(70 136 158);   */
+    background-image:url('../img/back6.jpg');
+    background-size:cover;
+  }  
+  .container {  
+      padding: 50px;  
+    /* background-color: rgb(33, 33, 33);   */
+    background-image:url('../img/back6.jpg');
+    background-size:cover;
+
+  }  
+    
+  input[type=text], input[type=email],input[type=number], textarea {  
+    width: 100%;  
+    padding: 15px;  
+    margin: 5px 0 22px 0;  
+    display: inline-block;  
+    border: none;  
+    background: #f1f1f1;  
+  }  
+  input[type=text]:focus, input[type=email]:focus,input[type=number]:focus {  
+    background-color: rgb(51, 110, 238);  
+    outline: none;  
+  } 
+  
+   div {  
+    padding: 10px 0;  
+  }  
+  hr {  
+    border: 1px solid #f1f1f1;  
+    margin-bottom: 25px;  
+  }  
+  .registerbtn {  
+    background-color: #4CAF50;  
+    color: white;  
+    padding: 16px 20px;  
+    margin: 8px 0;  
+    border: none;  
+    cursor: pointer;  
+    width: 100%;  
+     
+  }  
+  .registerbtn:hover {  
+    opacity: 0.8;  
+  }
+  .registerbtn:focus{
+    background-color: rgb(114 156 176);
+  }
+  
+  label{
+  font-size: larger;
+  color: aliceblue;
+  }
+
+ /* .i{
+   color: aliceblue;
+   flex-direction: row;
+   display: flex;
+ }  */
+
+#postionsel{
+  width: 300px;
+  height:30px;
+  
+}
+#committesel{
+  width: 300px;
+  height:30px;
+}
+.title{
+  color: rgb(208, 219, 227);
+}

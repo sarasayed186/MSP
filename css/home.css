@@ -1,0 +1,245 @@
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  color: #f0f5f7;
+}
+
+a {
+  color: #1ebbff;
+  text-decoration: none;
+}
+
+a:hover{
+   text-decoration: none; 
+}
+
+/*--------------------------------------------------------------
+# let's start Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 130%;
+  height: 95%;
+  z-index: 0;
+  border-radius: 0 0 50% 50%;
+  transform: translateX(-50%) rotate(0deg);
+}
+#hero::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 130%;
+  height: 96%;
+  opacity: 0.3;
+  z-index: 0;
+  border-radius: 0 0 50% 50%;
+  transform: translateX(-50%) translateY(18px) rotate(2deg);
+}
+#hero .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#hero h2 {
+  color: #f0f5f7;
+  margin-bottom: 30px;
+  font-size: 68px;
+  font-weight: 700;
+}
+#hero p {
+  width: 80%;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  margin: 0 auto 30px auto;
+  color: #f0f5f7;
+    font-size: 30px
+}
+#hero .carousel-control-prev, #hero .carousel-control-next {
+  width: 10%;
+}
+#hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
+  background: none;
+  font-size: 48px;
+  line-height: 1;
+  width: auto;
+  height: auto;
+}
+#hero .btn-get-started {
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 10px;
+  color: #f0f5f7;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  border: 2px solid #1ebbff;
+}
+#hero .btn-get-started:hover {
+  background: #1ebbff;
+  color: #f0f5f7;
+  text-decoration: none;
+}
+@media (min-width: 1024px) {
+  #hero p {
+    width: 60%;
+  }
+  #hero .carousel-control-prev, #hero .carousel-control-next {
+    width: 5%;
+  }
+}
+@media (max-width: 768px) {
+  #hero::after {
+    width: 180%;
+    height: 95%;
+    border-radius: 0 0 50% 50%;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  #hero::before {
+    top: 0;
+    width: 180%;
+    height: 94%;
+    border-radius: 0 0 50% 50%;
+    transform: translateX(-50%) translateY(20px) rotate(4deg);
+  }
+}
+@media (max-width: 575px) {
+  #hero h2 {
+    font-size: 40px;
+  }
+  #hero::after {
+    left: 40%;
+    top: 0;
+    width: 200%;
+    height: 95%;
+    border-radius: 0 0 50% 50%;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  #hero::before {
+    left: 50%;
+    top: 0;
+    width: 200%;
+    height: 94%;
+    border-radius: 0 0 50% 50%;
+    transform: translateX(-50%) translateY(20px) rotate(4deg);
+  }
+}
+.txt{
+    text-shadow: -2px -1px 8px rgba(255, 255, 255, 1);
+    filter:brightness(0.9); 
+  -webkit-filter:brightness(0.93);    
+  left:0;top:0;bottom:0;right:0; 
+  z-index:-1;
+}
+/*--------------------------------------------------------------
+# who are we
+--------------------------------------------------------------*/
+.about{
+    width: 70%;
+}
+section {
+  padding: 60px 0;
+}
+
+.section-bg {
+  background-color: #f0f5f7;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background-color: #f0f5f7;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #1ebbff;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.about-msp {
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.img-fluid{
+    height: 380px;
+    width: 420px;
+    margin-left: 50px;
+}
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+.stage {
+padding:40px;
+text-align:center;}
+.learn-more{
+  line-height:1em;
+  letter-spacing:0.06em;
+  font-size:20px;
+  text-decoration:none;
+  color:#f0f5f7;
+  background:#1ebbff;
+  display:inline-block;
+  padding:13px 10px 13px 13px;
+  transition:background 200ms;
+  border-radius:40px;
+}
+.learn-more:hover {
+  background:#f0f5f7;
+  color:#1ebbff;
+}
+.learn-more:after {
+  font-family: 'FontAwesome', sans-serif;
+  font-weight:300;
+  content: "\f105";
+  margin-left:10px;
+  color:#f0f5f7;
+  font-size:20px;
+  transition:color 200ms;
+}
+
+.learn-more:hover:after {
+  color:#1ebbff;
+}
